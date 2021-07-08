@@ -1,0 +1,77 @@
+body {
+  font-family: 'Arial';
+  background: #e5e5e5;
+}
+.switch-container {
+  position: relative;
+  min-height: 2.5rem;
+  border: 1px solid #cbcaca;
+  margin: 1rem;
+  padding: 1rem;
+}
+.switch-container .content {
+  padding-top: 2.5rem;
+  transition: 1 2s;
+}
+.switch-container .switch {
+  /* there should be some clearfix here */
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.switch-container .switch label {
+  float: left;
+  display: block;
+  font-size: 14px;
+  line-height: 28px;
+  color: #979696;
+  transition: 0.5s color;
+}
+.switch-container .switch label:first-of-type {
+  color: #008cff;
+}
+.switch-container .switch .knob {
+  float: left;
+  width: 62px;
+  height: 28px;
+  margin: 0 10px;
+  border-radius: 14px;
+  border: 1px solid #979696;
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+}
+.switch-container .switch .knob::after {
+  /* the yellow knob */
+  content: '';
+  background: #008cff;
+  /* change color here */
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+  position: absolute;
+  left: 4px;
+  top: 3px;
+  display: block;
+  transition: 0.5s left;
+}
+.switch-container .switch.on label:first-of-type {
+  color: #979696;
+}
+.switch-container .switch.on label:last-of-type {
+  /* change color here */
+  color: #008cff;
+}
+.switch-container .switch.on .knob::after {
+  left: 36px;
+  transition: 0.5s left;
+}
+.switch-container .switch::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+.hide {
+  display: none;
+  opacity: 0;
+}
